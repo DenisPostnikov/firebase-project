@@ -13,6 +13,10 @@
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		27E065E0CB957BF591F5E017 /* Pods_firebaseProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A17A345BD6359C2E1B20100 /* Pods_firebaseProject.framework */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		C2313A4E291AF01300560F19 /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C2313A4A291AF01200560F19 /* FontAwesome.ttf */; };
+		C2313A4F291AF01300560F19 /* FontAwesome5_Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C2313A4B291AF01300560F19 /* FontAwesome5_Regular.ttf */; };
+		C2313A50291AF01300560F19 /* FontAwesome5_Solid.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C2313A4C291AF01300560F19 /* FontAwesome5_Solid.ttf */; };
+		C2313A51291AF01300560F19 /* FontAwesome5_Brands.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C2313A4D291AF01300560F19 /* FontAwesome5_Brands.ttf */; };
 		C269F2982914F92F00F65606 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C269F2972914F92F00F65606 /* GoogleService-Info.plist */; };
 		F68327DB6F179727F4A9E1D5 /* Pods_firebaseProject_firebaseProjectTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4426CA98CDFE29DC79866AEF /* Pods_firebaseProject_firebaseProjectTests.framework */; };
 /* End PBXBuildFile section */
@@ -43,6 +47,10 @@
 		4426CA98CDFE29DC79866AEF /* Pods_firebaseProject_firebaseProjectTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_firebaseProject_firebaseProjectTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F0DEEFD89E02F3B94362CD5 /* Pods-firebaseProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-firebaseProject.release.xcconfig"; path = "Target Support Files/Pods-firebaseProject/Pods-firebaseProject.release.xcconfig"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = firebaseProject/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C2313A4A291AF01200560F19 /* FontAwesome.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = FontAwesome.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome.ttf"; sourceTree = "<group>"; };
+		C2313A4B291AF01300560F19 /* FontAwesome5_Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = FontAwesome5_Regular.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Regular.ttf"; sourceTree = "<group>"; };
+		C2313A4C291AF01300560F19 /* FontAwesome5_Solid.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = FontAwesome5_Solid.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Solid.ttf"; sourceTree = "<group>"; };
+		C2313A4D291AF01300560F19 /* FontAwesome5_Brands.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = FontAwesome5_Brands.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Brands.ttf"; sourceTree = "<group>"; };
 		C269F2972914F92F00F65606 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D1058705C4044468CC9D44A6 /* Pods-firebaseProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-firebaseProject.debug.xcconfig"; path = "Target Support Files/Pods-firebaseProject/Pods-firebaseProject.debug.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
@@ -88,6 +96,7 @@
 		13B07FAE1A68108700A75B9A /* firebaseProject */ = {
 			isa = PBXGroup;
 			children = (
+				C2313A49291AEFFE00560F19 /* Fonts */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
@@ -149,6 +158,17 @@
 				00E356EE1AD99517003FC87E /* firebaseProjectTests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		C2313A49291AEFFE00560F19 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				C2313A4A291AF01200560F19 /* FontAwesome.ttf */,
+				C2313A4D291AF01300560F19 /* FontAwesome5_Brands.ttf */,
+				C2313A4B291AF01300560F19 /* FontAwesome5_Regular.ttf */,
+				C2313A4C291AF01300560F19 /* FontAwesome5_Solid.ttf */,
+			);
+			name = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -249,7 +269,11 @@
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				C2313A4F291AF01300560F19 /* FontAwesome5_Regular.ttf in Resources */,
+				C2313A50291AF01300560F19 /* FontAwesome5_Solid.ttf in Resources */,
 				C269F2982914F92F00F65606 /* GoogleService-Info.plist in Resources */,
+				C2313A51291AF01300560F19 /* FontAwesome5_Brands.ttf in Resources */,
+				C2313A4E291AF01300560F19 /* FontAwesome.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
