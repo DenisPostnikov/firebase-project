@@ -1,13 +1,15 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import {
   View,
   Text,
   StyleSheet,
   TouchableOpacity,
 } from 'react-native';
+
 import { Formik } from 'formik';
 import * as Yup from 'yup';
 import firestore from '@react-native-firebase/firestore';
+import { v4 as uuidv4 } from 'uuid';
 
 import Icon from "../Icon";
 import colors from "../../config/color";
@@ -15,31 +17,14 @@ import RadioButton from "../RadioButton";
 import FormInput from "../FormInput";
 import ErrorMessage from "../ErrorMessage";
 
+import CardManager from "../../managers/CardManager";
+
 const CreateCardForm = ({ hideModal }) => {
-  const init = async () => {
-    const events = await firestore()
-      .collection('cards')
-      .get()
-      .then(querySnapshot => {
-        querySnapshot.docs.map(doc => {
-          console.log('LOG 1', doc.data());
-          return doc.data();
-        });
-      });
-
-
-    console.log(999, events, 'obj')
-  }
-
-  useEffect(() => {
-    init();
-  }, [])
-
   const dataColors = [
     { id: 1, value: 'blue' },
     { id: 2, value: 'cyan' },
     { id: 3, value: 'pink' },
-    { id: 4, value: 'dark-blue' },
+    { id: 4, value: 'darkblue' },
   ];
 
   const [color, setColor] = useState({
@@ -62,18 +47,21 @@ const CreateCardForm = ({ hideModal }) => {
     setColor({ color })
   }
 
-  const onSubmit = values => {
+  const onSubmit = async values => {
     const obj = {
       ...values,
       ...color,
+      id: uuidv4(),
       createdAt: firestore.FieldValue.serverTimestamp(),
     }
 
-    firestore()
-      .collection('cards')
-      .add(obj)
-      .then(() => hideModal())
-      .catch(e => console.log('Error add firestore', e));
+    try {
+      await new CardManager().addCard(obj);
+
+      hideModal()
+    } catch (e) {
+      console.error("Error add Card: ", e)
+    }
   }
 
   return (
